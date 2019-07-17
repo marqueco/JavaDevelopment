@@ -11,7 +11,7 @@ public class Person {
 	private String education;
 	private int contribution;
 	
-	public Person(String name) {
+	public Person(String name, int age) {
 		this.name = name;
 		this.age = 0;
 		this.weight = 0;
@@ -85,4 +85,13 @@ public class Person {
 		this.height = height;
 	}
 	
+	public static void main(String[] args) {
+		Person lupe = new Person("Lupe", 67);
+		
+		System.out.println( lupe );
+		
+		lupe.becomeOlder();
+		
+		System.out.println( lupe );
+	}
 }
