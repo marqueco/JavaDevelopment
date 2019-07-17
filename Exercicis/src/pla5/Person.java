@@ -54,7 +54,7 @@ public class Person {
 
 	public String toString() {
 	
-		return "Information under entry " + this.name + ": age(" + this.age + "); BMI(" + bodyMassIndex();
+		return "Information under entry " + this.name + ": age(" + this.age + "); BMI(" + bodyMassIndex() + "). " + this.name + " is " + getEducation() + " and is " + isActive() + " currently working";
 	}
 	
 	public int getHeight() {
@@ -73,8 +73,11 @@ public class Person {
 		return this.contribution;
 	}
 	
-	public String getEducation() {
-		return this.education;
+	public String getEducation(String name) {
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Do you hold a degree? What is it?");
+		String education = reader.nextLine(); 
+		return education;
 	}
 	public void setWeight() {
 		Scanner reader = new Scanner(System.in);
@@ -87,6 +90,8 @@ public class Person {
 	
 	public static void main(String[] args) {
 		Person lupe = new Person("Lupe", 67);
+		
+		getEducation(lupe);
 		
 		System.out.println( lupe );
 		
