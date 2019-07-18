@@ -10,21 +10,21 @@ public class Person {
 	private int weight;
 	private String occupation;
 	private String education;
-	private int contribution;
+	private int children;
 
-	
-	//////////////////////////////////////////////////// Constructors for class Person
-	
+	//////////////////////////////////////////////////// Constructors for class
+	//////////////////////////////////////////////////// Person
+
 	public Person(String name, int age) {
 		this.name = name;
 		this.age = 0;
 	}
 
-	public Person(String name, int age, String education, int contribution) {
+	public Person(String name, int age, String education, int children) {
 		this.name = name;
 		this.age = 0;
 		this.education = education;
-		this.contribution = 0;
+		this.children = 0;
 	}
 
 	public Person(String name, int age, int height, int weight, boolean active) {
@@ -36,7 +36,10 @@ public class Person {
 		this.occupation = "";
 	}
 
-	///////////////////////////////////////////////////////////////////////// Methods for class Person
+	///////////////////////////////////////////////////////////////////////// Methods
+	///////////////////////////////////////////////////////////////////////// for
+	///////////////////////////////////////////////////////////////////////// class
+	///////////////////////////////////////////////////////////////////////// Person
 
 	public void printPerson() {
 		System.out.println(this.name + " is " + this.age + " years old.");
@@ -48,13 +51,6 @@ public class Person {
 
 	public boolean isAdult() {
 		if (this.age < 18) {
-			return false;
-		}
-		return true;
-	}
-
-	public boolean isActive() {
-		if (this.occupation == "") {
 			return false;
 		}
 		return true;
@@ -73,9 +69,26 @@ public class Person {
 				+ this.name + " is " + getEducation() + " and is " + isActive() + " currently working";
 	}
 
-	
-	///////////////////////////////////////////////////////////////////// Getters and Setters for class Person
-	
+	public boolean isActive() {
+		if (this.occupation == "") {
+			return false;
+		}
+		return true;
+	}
+
+	public boolean isParent() {
+		if (this.children > 0) {
+			return true;
+		}
+		return false;
+	}
+
+	///////////////////////////////////////////////////////////////////// Getters
+	///////////////////////////////////////////////////////////////////// and
+	///////////////////////////////////////////////////////////////////// Setters
+	///////////////////////////////////////////////////////////////////// for class
+	///////////////////////////////////////////////////////////////////// Person
+
 	public int getHeight() {
 		return this.height;
 	}
@@ -88,25 +101,19 @@ public class Person {
 		return this.name;
 	}
 
-	public int getContribution() {
-		return this.contribution;
-	}
-
 	public String getEducation() {
 		return this.education;
 	}
 
-	public void setWeight() {
-		Scanner reader = new Scanner(System.in);
-		this.weight = Integer.parseInt(reader.nextLine());
+	public void setWeight(int weight) {
+		this.weight = weight;
 	}
 
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	
-	
-	//////////////////////////////////////////////////////////// Main for class Person
 
-	
+	//////////////////////////////////////////////////////////// Main for class
+	//////////////////////////////////////////////////////////// Person
+
 }
