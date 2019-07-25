@@ -3,8 +3,8 @@ package pac5Exercicis;
 public class Test {
 	public static void main(String[] args) {
 		Person lupe = new Person("Lupe", 67);
-		Person albert = new Person("Albert", 83, "doctor", 100);
-		Person albertet = new Person("Albert", 32, 65, 175, true);
+		Person albert = new Person("Albert", 83, "doctor", 2);
+		Person albertet = new Person("Albert", 32, 65, 175);
 
 		System.out.println(lupe);
 		System.out.println(albert);
@@ -17,3 +17,7 @@ public class Test {
 
 	}
 }
+
+
+//// He fet tres constructors diferents però no entenc perquè només en funciona un 
+/// (el de String name, int age, int height, int weight és el que funciona).

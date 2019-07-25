@@ -1,6 +1,5 @@
 package pac5Exercicis;
 
-import java.util.Scanner;
 
 public class Person {
 
@@ -11,6 +10,7 @@ public class Person {
 	private String occupation;
 	private String education;
 	private int children;
+	private String housing;
 
 	//////////////////////////////////////////////////// Constructors for class
 	//////////////////////////////////////////////////// Person
@@ -20,20 +20,20 @@ public class Person {
 		this.age = 0;
 	}
 
-	public Person(String name, int age, String education, int children) {
+	public Person(String name, int age, String occupation, int children) {
 		this.name = name;
 		this.age = 0;
-		this.education = education;
+		this.occupation = occupation;
 		this.children = 0;
 	}
 
-	public Person(String name, int age, int height, int weight, boolean active) {
+	public Person(String name, int age, int height, int weight) {
 
 		this.name = name;
 		this.age = age;
 		this.weight = 0;
 		this.height = 0;
-		this.occupation = "";
+		
 	}
 
 	///////////////////////////////////////////////////////////////////////// Methods
@@ -82,6 +82,14 @@ public class Person {
 		}
 		return false;
 	}
+	
+	public boolean isOwner() {
+		if (housing == "owner") {
+			return true;
+		} else
+			return false;
+	}
+	
 
 	///////////////////////////////////////////////////////////////////// Getters
 	///////////////////////////////////////////////////////////////////// and
@@ -103,6 +111,10 @@ public class Person {
 
 	public String getEducation() {
 		return this.education;
+	}
+	
+	public String getOccupation() {
+		return this.occupation;
 	}
 
 	public void setWeight(int weight) {
